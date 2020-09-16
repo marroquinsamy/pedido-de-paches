@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido de paches</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="main.css">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <h1>Pedido de paches</h1>
+    <form class="content">
+        <div class="header">
+            <h2>Datos personales</h2>
+        </div>
+        <div class="con-input">
+            <input type="text" name="" id="" placeholder="Nombre y apellido">
+            <i class="bx bxs-user icon"></i>
+            <div class="bg"></div>
+        </div>
+        <div class="con-input">
+            <input type="tel" name="" id="" placeholder="Número de teléfono">
+            <i class="bx bxs-phone icon"></i>
+            <div class="bg"></div>
+        </div>
+        <div class="con-input">
+            <input type="text" name="" id="" placeholder="Dirección de la entrega">
+            <i class="bx bxs-map icon"></i>
+            <div class="bg"></div>
+        </div>
+        <div class="header">
+            <h2>Cantidad de paches</h2>
+        </div>
+        <div class="con-input number">
+            <a onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</a>
+            <input type="number" name="" id="" value="4" min="4" readonly>
+            <a onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus">+</a>
+            <div class="bg"></div>
+        </div>
+        <p id="price"></p>
+        <div class="spicy">
+            <p>No picantes</p>
+            <label for="check" class="con-switch">
+                <input type="checkbox" name="" id="check" class="input">
+                <div class="circle"></div>
+            </label>
+            <p>Picantes</p>
+        </div>
+    </form>
+    <script src="main.js"></script>
+</body>
+</html>
