@@ -38,14 +38,14 @@
             <a onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="quantity-buttons">+</a>
             <div class="bg"></div>
         </div>
-        <p class="price-container">Total Q<span id="price"></span></p>
+        <p class="price-container">Total:&nbsp;&nbsp;&nbsp;Q<span id="price"></span></p>
         <div class="spicy">
-            <p>No picantes</p>
+            <p class="spicy-option">No picantes</p>
             <label for="check" class="con-switch">
                 <input type="checkbox" name="" id="check" class="input">
                 <div class="circle"></div>
             </label>
-            <p>Picantes</p>
+            <p class="spicy-option">Picantes</p>
         </div>
         <!-- <button class="btn-buy" onclick="handleClickAdd(event)">
             Comprar
@@ -75,7 +75,13 @@
                 </span>
                 <span class="loading-animate"></span>
             </button>
-            <button type="reset">Cancelar pedido</button>
+            <button id="reset-button">Cancelar pedido</button>
+        </div>
+        <div class="credit">
+            <p>Written and developed by Samuel Marroquín G.</p>
+            <a href="https://github.com/marroquinsamy/" target="_blank">
+                <i class="bx bxl-github"></i>
+            </a>
         </div>
     </form>
     <script src="main.js"></script>
