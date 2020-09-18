@@ -33,12 +33,12 @@
             <h2>Cantidad de paches</h2>
         </div>
         <div class="con-input number">
-            <a onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</a>
-            <input type="number" name="" id="" value="4" min="4" readonly>
-            <a onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus">+</a>
+            <a onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="quantity-buttons">-</a>
+            <input type="number" name="" id="quantity" value="4" min="4" readonly>
+            <a onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="quantity-buttons">+</a>
             <div class="bg"></div>
         </div>
-        <p id="price"></p>
+        <p class="price-container">Total Q<span id="price"></span></p>
         <div class="spicy">
             <p>No picantes</p>
             <label for="check" class="con-switch">
@@ -46,6 +46,36 @@
                 <div class="circle"></div>
             </label>
             <p>Picantes</p>
+        </div>
+        <!-- <button class="btn-buy" onclick="handleClickAdd(event)">
+            Comprar
+        </button>
+        <div class="arrow">
+            <i class="bx bx-right-arrow-alt"></i>
+            <i class="bx bx-check"></i>
+        </div>
+        <span class="text">
+            Desliza para confirmar
+        </span>
+        <div class="success">
+            <i class="bx bx-cart-alt"></i>
+        </div>
+        <div class="con-effect">
+            <div class="drips-content"></div>
+            <div class="drips-content-2"></div>
+            <div class="drips-content3"></div>
+            <div class="drips-arrow"></div>
+            <div class="drips-right"></div>
+        </div> -->
+        <div class="button-container">
+            <button type="button" class="btn">
+                <i class='bx bx-send'></i>
+                <span class="text">
+                    Enviar pedido
+                </span>
+                <span class="loading-animate"></span>
+            </button>
+            <button type="reset">Cancelar pedido</button>
         </div>
     </form>
     <script src="main.js"></script>
