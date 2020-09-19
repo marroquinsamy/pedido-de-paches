@@ -1,0 +1,28 @@
+{
+  "name": "jancarlo",
+  "version": "1.0.0",
+  "description": "Proyecto de práctica para la solución de la forma de pedido del negocio de un amigo.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marroquinsamy/pedido-de-paches.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marroquinsamy/pedido-de-paches/issues"
+  },
+  "homepage": "https://github.com/marroquinsamy/pedido-de-paches#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "nodemailer": "^6.4.11"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

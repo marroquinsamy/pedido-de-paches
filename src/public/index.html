@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido de paches</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="main.css">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <h1>Pedido de paches</h1>
+    <div class="content">
+        <form action="/send-email" method="POST">
+            <div class="header">
+                <h2>Datos personales</h2>
+            </div>
+            <div class="con-input">
+                <input type="text" name="name" id="" placeholder="Nombre y apellido">
+                <i class="bx bxs-user icon"></i>
+                <div class="bg"></div>
+            </div>
+            <div class="con-input">
+                <input type="tel" name="phone" id="" placeholder="Número de teléfono">
+                <i class="bx bxs-phone icon"></i>
+                <div class="bg"></div>
+            </div>
+            <div class="con-input">
+                <input type="text" name="address" id="" placeholder="Dirección de la entrega">
+                <i class="bx bxs-map icon"></i>
+                <div class="bg"></div>
+            </div>
+            <div class="header">
+                <h2>Cantidad de paches</h2>
+            </div>
+            <div class="con-input number">
+                <a onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="quantity-buttons">-</a>
+                <input type="number" name="quantity" id="quantity" value="4" min="4" readonly>
+                <a onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="quantity-buttons">+</a>
+                <div class="bg"></div>
+            </div>
+            <p class="price-container">Total:&nbsp;&nbsp;&nbsp;Q<span id="price"></span></p>
+            <div class="spicy">
+                <p class="spicy-option">No picantes</p>
+                <label for="check" class="con-switch">
+                    <input type="checkbox" name="spicy" id="check" class="input">
+                    <div class="circle"></div>
+                </label>
+                <p class="spicy-option">Picantes</p>
+            </div>
+            <div class="con-input">
+                <textarea rows="7" class="" name="observation" id="" placeholder="Comentarios u observaciones sobre el pedido"></textarea>
+                <div class="bg"></div>
+            </div>
+            <div class="button-container">
+                <button type="button" class="btn">
+                    <i class='bx bx-send'></i>
+                    <span class="text">
+                        Enviar pedido
+                    </span>
+                    <span class="loading-animate"></span>
+                </button>
+                <button id="reset-button">Cancelar pedido</button>
+            </div>
+        </form>
+        <footer class="credit">
+            <p>Written and developed by Samuel Marroquín G.</p>
+            <a href="https://github.com/marroquinsamy/" target="_blank">
+                <i class="bx bxl-github"></i>
+            </a>
+        </footer>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
