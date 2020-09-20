@@ -1,25 +1,36 @@
-const form = document.getElementsByTagName('form')
+const form = document.getElementById('form')
+
+form.addEventListener('submit', (evt) => {
+    evt.defaultPrevented()
+})
 
 document.querySelector('.btn').addEventListener('click', (evt) => {
     evt.target.classList.add('loading')
-
-    setTimeout(() => {
+    if (validateForm()) {
+        setTimeout(() => {
+            form.submit()
+            setTimeout(() => {
+                evt.target.classList.remove('loading')
+                price.innerHTML = `40`
+                form.reset()
+            }, 500)
+        }, 2000)
+    } else {
         evt.target.classList.remove('loading')
-        form[0].submit()
-    }, 3000);
+        alert('Los campos de datos personales deben de ser llenados.')
+    }
 })
 
 function priceCalculator() {
     quantity = document.getElementById('quantity').value
     price.innerHTML = `${quantity * 10}`
-    console.log(quantity)
 }
 
 const price = document.getElementById('price')
 let quantity = document.getElementById('quantity').value
 priceCalculator()
 
-const quantityButtons = document.getElementsByClassName('quantity-buttons   ')
+const quantityButtons = document.getElementsByClassName('quantity-buttons')
 for (let button of quantityButtons) {
     button.addEventListener('click', () => {
         priceCalculator()
@@ -27,6 +38,17 @@ for (let button of quantityButtons) {
 }
 
 document.getElementById('reset-button').addEventListener('click', () => {
-    priceCalculator()
-    form[0].reset()
+    price.innerHTML = `40`
+    form.reset()
 })
+
+function validateForm() {
+    const name = document.forms['form']['name'].value.trim()
+    const phone = document.forms['form']['phone'].value.trim()
+    const address = document.forms['form']['address'].value.trim()
+    if (name == '' || phone == '' || address == '') {
+        return false
+    } else {
+        return true
+    }
+}
