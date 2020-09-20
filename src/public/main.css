@@ -245,7 +245,7 @@ input[type=number]::-webkit-outer-spin-button {
     border: 0px solid #49D75C;
     border-radius: 35px;
     font-size: 1rem;
-    font-weight: bold;
+    font-family: 'ProductSans-Bold', sans-serif;
     color: #fff;
     display: flex;
     align-items: center;
@@ -353,7 +353,7 @@ input[type=number]::-webkit-outer-spin-button {
     background: none;
     height: auto;
     margin-top: 15px;
-    font-weight: bold;
+    font-family: 'ProductSans-Bold', sans-serif;
     cursor: pointer;
 }
 
@@ -397,7 +397,7 @@ input[type=number]::-webkit-outer-spin-button {
     visibility: hidden;
     border-radius: 5px;
     transform: scaleX(0);
-    transition: all .25s ease;
+    transition: all .15s ease;
 }
 
 .credit > p > a:hover:before {
@@ -431,7 +431,7 @@ textarea {
 .container > p {
     color: rbga(0, 0, 0, .8);
     font-size: 1.3em;
-    width: 70%;
+    width: 75%;
     text-align: center;
     font-family: 'ProductSans-Bold', sans-serif;
     margin: 10px 0;
@@ -440,7 +440,7 @@ textarea {
 #contact {
     font-size: 1em;
     color: rgba(0, 0, 0, .6);
-    width: 60%;
+    width: 65%;
 }
 
 #contact > a {
