@@ -4,6 +4,7 @@
   "description": "Proyecto de práctica para la solución de la forma de pedido del negocio de un amigo.",
   "main": "index.js",
   "scripts": {
+    "start": "node src/index.js",
     "dev": "nodemon src/index.js"
   },
   "repository": {
